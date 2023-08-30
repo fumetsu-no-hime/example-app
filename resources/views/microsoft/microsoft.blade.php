@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>microsoft</title>
-    <link rel="stylesheet" href="{{asset('./css/microsoft.css')}}">
+    <link rel="stylesheet" href="{{ asset('./css/microsoft.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/swiper-1.css">
+    <link rel="stylesheet" href="{{ asset('./css/swiper-1.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite('resources/css/app.css')
 </head>
 
 <body>
     <nav class="container-normal">
-        <a href="/"><div class="logo"></div></a>
+        <a href="/">
+            <div class="logo"></div>
+        </a>
         <!-- 中間那一段後來會隱藏 -->
         <ul class="pc-menu">
             <li>Microsoft 365</li>
@@ -233,13 +236,15 @@
             <li class="signin">
                 <a href="">
                     <span>登入</span>
-                    <img src="{{asset('./img/螢幕擷取畫面 2023-07-16 102318.png')}}" alt="">
+                    <img src="{{ asset('./img/螢幕擷取畫面 2023-07-16 102318.png') }}" alt="">
                 </a>
             </li>
         </ul>
     </nav>
     <header>
         <div>
+            <div class="text-[75px] bg-[#d8d81d44] md:bg-[#8456] lg:bg-slate-600 border-[5px]  hover:bg-[#dd2f]">123456</div>
+
             <div id="my-swiper-1" class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -252,11 +257,14 @@
                             </a>
                         </div>
                         <picture>
-                            <source media="(min-width: 1400px)" srcset="{{asset('./img/Surface-Pro-9.avif')}}">
-                            <source media="(min-width: 1084px)" srcset="{{asset('./img/Surface-Pro-9-1399x600.avif')}}">
-                            <source media="(min-width: 860px)" srcset="{{asset('./img/Surface-Pro-9-1083x600.avif')}}">
-                            <source media="(min-width: 540px)" srcset="{{asset('./img/Surface-Pro-9-859x540.avif')}}">
-                            <img src="{{asset('./img/Surface-Pro-9-859x540.avif')}}" alt="">
+                            <source media="(min-width: 1400px)" srcset="{{ asset('./img/Surface-Pro-9.avif') }}">
+                            <source media="(min-width: 1084px)"
+                                srcset="{{ asset('./img/Surface-Pro-9-1399x600.avif') }}">
+                            <source media="(min-width: 860px)"
+                                srcset="{{ asset('./img/Surface-Pro-9-1083x600.avif') }}">
+                            <source media="(min-width: 540px)"
+                                srcset="{{ asset('./img/Surface-Pro-9-859x540.avif') }}">
+                            <img src="{{ asset('./img/Surface-Pro-9-859x540.avif') }}" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
@@ -276,12 +284,15 @@
 
                         </div>
                         <picture>
-                            <source media="(min-width: 1400px)" srcset="{{asset('./img/M365-Icon-Bounce-Word-Merch.avif')}}">
+                            <source media="(min-width: 1400px)"
+                                srcset="{{ asset('./img/M365-Icon-Bounce-Word-Merch.avif') }}">
                             <source media="(min-width: 1084px)"
-                                srcset="{{asset('./img/M365-Icon-Bounce-Word-Merch-1399x600.avif')}}">
-                            <source media="(min-width: 860px)" srcset="{{asset('./img/M365-Icon-Bounce-Word-Merch-1083x600.avif')}}">
-                            <source media="(min-width: 540px)" srcset="{{asset('./img/M365-Icon-Bounce-Word-Merch-859x540.avif')}}">
-                            <img src="{{asset('./img/M365-Icon-Bounce-Word-Merch-859x540.avif')}}" alt="">
+                                srcset="{{ asset('./img/M365-Icon-Bounce-Word-Merch-1399x600.avif') }}">
+                            <source media="(min-width: 860px)"
+                                srcset="{{ asset('./img/M365-Icon-Bounce-Word-Merch-1083x600.avif') }}">
+                            <source media="(min-width: 540px)"
+                                srcset="{{ asset('./img/M365-Icon-Bounce-Word-Merch-859x540.avif') }}">
+                            <img src="{{ asset('./img/M365-Icon-Bounce-Word-Merch-859x540.avif') }}" alt="">
                         </picture>
                     </div>
                 </div>
@@ -296,20 +307,20 @@
             <div class="first-choice">
                 <a href="https://www.microsoft.com/zh-tw/microsoft-365/buy/compare-all-microsoft-365-products?icid=MSCOM_QL_M365"
                     target="_blank">
-                    <img src="{{asset('./img/gldn-Quick-Link-Icon-80x80-Microsoft-365.webp')}}" alt="">
+                    <img src="{{ asset('./img/gldn-Quick-Link-Icon-80x80-Microsoft-365.webp') }}" alt="">
                     <div>選擇您的 Microsoft 365</div>
                 </a>
             </div>
             <div class="first-choice">
                 <a href="https://www.microsoft.com/zh-tw/surface?icid=MSCOM_QL_Surface" target="_blank">
-                    <img src="{{asset('./img/icon-LL-surface-kickstand-120x120.webp')}}" alt="">
+                    <img src="{{ asset('./img/icon-LL-surface-kickstand-120x120.webp') }}" alt="">
                     <div>選購 Surface 裝置</div>
                 </a>
             </div>
             <div class="first-choice">
                 <a href="https://www.microsoft.com/zh-tw/windows/get-windows-11?icid=MSCOM_QL_Windows&r=1"
                     target="_blank">
-                    <img src="{{asset('./img/gldn-Quick-Link-Icon-80x80-Microsoft-365.webp')}}" alt="">
+                    <img src="{{ asset('./img/gldn-Quick-Link-Icon-80x80-Microsoft-365.webp') }}" alt="">
                     <div>取得 Windows 11</div>
                 </a>
             </div>
@@ -319,11 +330,15 @@
             <div class="one-card">
                 <a href="">
                     <picture>
-                        <source media="(min-width: 1400px)" src="{{asset('./img/gldn-XSX-CP-Xbox-Series-X380.webp')}}">
-                        <source media="(min-width: 1084px)" src="{{asset('./img/gldn-XSX-CP-Xbox-Series-X297.webp')}}">
-                        <source media="(min-width: 860px)" src="{{asset('./img/gldn-XSX-CP-Xbox-Series-X517.jpg')}}">
-                        <source media="(min-width: 540px)" src="{{asset('./img/gldn-XSX-CP-Xbox-Series-X406.webp')}}">
-                        <img src="{{asset('./img/gldn-XSX-CP-Xbox-Series-X406.webp')}}" alt="">
+                        <source media="(min-width: 1400px)"
+                            src="{{ asset('./img/gldn-XSX-CP-Xbox-Series-X380.webp') }}">
+                        <source media="(min-width: 1084px)"
+                            src="{{ asset('./img/gldn-XSX-CP-Xbox-Series-X297.webp') }}">
+                        <source media="(min-width: 860px)"
+                            src="{{ asset('./img/gldn-XSX-CP-Xbox-Series-X517.jpg') }}">
+                        <source media="(min-width: 540px)"
+                            src="{{ asset('./img/gldn-XSX-CP-Xbox-Series-X406.webp') }}">
+                        <img src="{{ asset('./img/gldn-XSX-CP-Xbox-Series-X406.webp') }}" alt="">
                     </picture>
                     <div class="content">
                         <h2>Xbox Series X</h2>
@@ -335,7 +350,7 @@
             </div>
             <div class="one-card">
                 <a href="">
-                    <img src="{{asset('/img/Content-Card-Bing-AI-No-Text517.webp')}}" alt="">
+                    <img src="{{ asset('/img/Content-Card-Bing-AI-No-Text517.webp') }}" alt="">
                     <div class="content">
                         <h2>隆重推出新版 Bing</h2>
                         <h5>問真正的問題。 聊天和創作。 從您的 AI 網路副駕駛獲得更好的答案。</h5>
@@ -346,7 +361,8 @@
             </div>
             <div class="one-card">
                 <a href="">
-                    <img src="{{asset('./img/gldn-XGP-Game-Pass-Ultimate-Characters-06102010-1517.avif')}}" alt="">
+                    <img src="{{ asset('./img/gldn-XGP-Game-Pass-Ultimate-Characters-06102010-1517.avif') }}"
+                        alt="">
                     <div class="content">
                         <h2>Xbox Game Pass Ultimate</h2>
                         <h5>Xbox Live Gold 以及數百款高品質主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</h5>
@@ -357,7 +373,7 @@
             </div>
             <div class="one-card">
                 <a href="">
-                    <img src="{{asset('./img/gldn-CP-Windows11-GlobalLaunch517.avif')}}" alt="">
+                    <img src="{{ asset('./img/gldn-CP-Windows11-GlobalLaunch517.avif') }}" alt="">
                     <div class="content">
                         <h2>專為今天和明天的生活而設計</h2>
                         <h5>新一代遊戲、 您的目標、 親朋好友。 Windows 11 是為了讓您更貼近所喜愛的一切。</h5>
@@ -371,11 +387,15 @@
             <a href="">
                 <div class="container">
                     <picture>
-                        <source media="(min-width: 1400px)" srcset="{{asset('./img/gldn-MSFT-hero-Edge_VP5-1596x600.avif')}}">
-                        <source media="(min-width: 1084px)" srcset="{{asset('./img/gldn-MSFT-hero-Edge_VP4-1260x600.avif')}}">
-                        <source media="(min-width: 860px)" srcset="{{asset('./img/gldn-MSFT-hero-Edge_VP3-1083x600.avif')}}">
-                        <source media="(min-width: 540px)" srcset="{{asset('./img/gldn-MSFT-hero-Edge_VP2-859x540.avif')}}">
-                        <img src="{{asset('./img/gldn-MSFT-hero-Edge_VP5-1596x600.avif')}}" alt="">
+                        <source media="(min-width: 1400px)"
+                            srcset="{{ asset('./img/gldn-MSFT-hero-Edge_VP5-1596x600.avif') }}">
+                        <source media="(min-width: 1084px)"
+                            srcset="{{ asset('./img/gldn-MSFT-hero-Edge_VP4-1260x600.avif') }}">
+                        <source media="(min-width: 860px)"
+                            srcset="{{ asset('./img/gldn-MSFT-hero-Edge_VP3-1083x600.avif') }}">
+                        <source media="(min-width: 540px)"
+                            srcset="{{ asset('./img/gldn-MSFT-hero-Edge_VP2-859x540.avif') }}">
+                        <img src="{{ asset('./img/gldn-MSFT-hero-Edge_VP5-1596x600.avif') }}" alt="">
                     </picture>
                     <div class="download">
                         <h2>Microsoft Edge</h2>
@@ -389,7 +409,7 @@
         <section class="four-card-2 container-normal">
             <div class="one-card-2">
                 <a href="">
-                    <img src="{{asset('./img/gldn-Surf-CP-SurfaceFamilyForBusiness517.webp')}}" alt="">
+                    <img src="{{ asset('./img/gldn-Surf-CP-SurfaceFamilyForBusiness517.webp') }}" alt="">
                     <div class="content">
                         <h3>適用於商務的 Surface</h3>
                         <h5>無論從事哪種工作，都有一款有助於成功的 Surface。</h5>
@@ -401,7 +421,8 @@
             </div>
             <div class="one-card-2">
                 <a href="">
-                    <img src="{{asset('./img/Content-Card-Microsoft-365-For-Business-Woman-Teams-Call 517.webp')}}" alt="">
+                    <img src="{{ asset('./img/Content-Card-Microsoft-365-For-Business-Woman-Teams-Call 517.webp') }}"
+                        alt="">
                     <div class="content">
                         <h3>免費試用 Microsoft 365</h3>
                         <h5>透過一個月免費試用的 Microsoft 365 商務標準版，跨裝置取得 Microsoft Teams、安全雲端儲存空間和進階應用程式。</h5>
@@ -412,7 +433,7 @@
             </div>
             <div class="one-card-2">
                 <a href="">
-                    <img src="{{asset('./img/JIC-DPS-CP01517.webp')}}" alt="">
+                    <img src="{{ asset('./img/JIC-DPS-CP01517.webp') }}" alt="">
                     <div class="content">
                         <h3>歡迎使用 Windows 365 雲端電腦</h3>
                         <h5>從 Microsoft 雲端安全地將您的 Windows 體驗串流到任何裝置。</h5>
@@ -423,7 +444,7 @@
             </div>
             <div class="one-card-2">
                 <a href="">
-                    <img src="{{asset('./img/Content-Card-Windows-11-Business517.avif')}}" alt="">
+                    <img src="{{ asset('./img/Content-Card-Windows-11-Business517.avif') }}" alt="">
                     <div class="content">
                         <h3>商務用 Windows 11</h3>
                         <h5> 專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</h5>
@@ -541,7 +562,7 @@
                 el: ".swiper-pagination",
                 clickable: true,
                 // 客製化的部分
-                renderBullet: function (index, className) {
+                renderBullet: function(index, className) {
                     console.log(index, className);
                     if (index == 0) {
                         return `
