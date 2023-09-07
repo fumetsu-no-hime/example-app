@@ -235,16 +235,16 @@
             </li>
             <li class="signin">
                 <a href="">
-                    <span>登入</span>
-                    <img src="{{ asset('./img/螢幕擷取畫面 2023-07-16 102318.png') }}" alt="">
+                    <span class="width-[70px]">登入<img src="{{ asset('./img/螢幕擷取畫面 2023-07-16 102318.png') }}"
+                            alt=""></span>
                 </a>
             </li>
         </ul>
     </nav>
     <header>
         <div>
-            <div class="text-[75px] bg-[#d8d81d44] md:bg-[#8456] lg:bg-slate-600 border-[5px]  hover:bg-[#dd2f]">123456</div>
-
+            {{-- <div class="text-[72px]">{{$news}}</div> --}}
+            {{-- <div class="text-[75px] bg-[#d8d81d44] md:bg-[#8456] lg:bg-slate-600 border-[5px]  hover:bg-[#dd2f]">123456</div> --}}
             <div id="my-swiper-1" class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -407,19 +407,20 @@
         </section>
         <h4>適用於商務</h4>
         <section class="four-card-2 container-normal">
-            <div class="one-card-2">
-                <a href="">
-                    <img src="{{ asset('./img/gldn-Surf-CP-SurfaceFamilyForBusiness517.webp') }}" alt="">
-                    <div class="content">
-                        <h3>適用於商務的 Surface</h3>
-                        <h5>無論從事哪種工作，都有一款有助於成功的 Surface。</h5>
-                    </div>
-                    <p>立即選購<i class="fa-solid fa-chevron-right"></i>
-                    </p>
-
-                </a>
-            </div>
-            <div class="one-card-2">
+            @foreach ($news as $item)
+                <div class="one-card-2">
+                    <a href="">
+                        <img src="{{ $item->img_path }}" alt="">
+                        <div class="content">
+                            <h3>{{ $item->title }}</h3>
+                            <h5>{{ $item->content }}</h5>
+                        </div>
+                        <p>立即選購<i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </a>
+                </div>
+            @endforeach
+            {{-- < <div class="one-card-2">
                 <a href="">
                     <img src="{{ asset('./img/Content-Card-Microsoft-365-For-Business-Woman-Teams-Call 517.webp') }}"
                         alt="">
@@ -430,29 +431,29 @@
                     <p>開始免費試用<i class="fa-solid fa-chevron-right"></i>
                     </p>
                 </a>
-            </div>
-            <div class="one-card-2">
-                <a href="">
-                    <img src="{{ asset('./img/JIC-DPS-CP01517.webp') }}" alt="">
-                    <div class="content">
-                        <h3>歡迎使用 Windows 365 雲端電腦</h3>
-                        <h5>從 Microsoft 雲端安全地將您的 Windows 體驗串流到任何裝置。</h5>
-                    </div>
-                    <p>立即下載<i class="fa-solid fa-chevron-right"></i>
-                    </p>
-                </a>
-            </div>
-            <div class="one-card-2">
-                <a href="">
-                    <img src="{{ asset('./img/Content-Card-Windows-11-Business517.avif') }}" alt="">
-                    <div class="content">
-                        <h3>商務用 Windows 11</h3>
-                        <h5> 專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</h5>
-                    </div>
-                    <p>深入了解<i class="fa-solid fa-chevron-right"></i>
-                    </p>
-                </a>
-            </div>
+                </div>
+                <div class="one-card-2">
+                    <a href="">
+                        <img src="{{ asset('./img/JIC-DPS-CP01517.webp') }}" alt="">
+                        <div class="content">
+                            <h3>歡迎使用 Windows 365 雲端電腦</h3>
+                            <h5>從 Microsoft 雲端安全地將您的 Windows 體驗串流到任何裝置。</h5>
+                        </div>
+                        <p>立即下載<i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </a>
+                </div>
+                <div class="one-card-2">
+                    <a href="">
+                        <img src="{{ asset('./img/Content-Card-Windows-11-Business517.avif') }}" alt="">
+                        <div class="content">
+                            <h3>商務用 Windows 11</h3>
+                            <h5> 專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</h5>
+                        </div>
+                        <p>深入了解<i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </a>
+                </div> --}}
         </section>
         <div class="social-media container-normal">關注 Microsoft
             <a href="https://www.facebook.com/MicrosoftTaiwan/" target="_blank"><i
